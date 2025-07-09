@@ -1,6 +1,5 @@
 package org.mobedo;
 
-import java.util.AbstractList;
 import java.util.AbstractMap;
 import java.util.ArrayList;
 import java.util.List;
@@ -16,13 +15,14 @@ public class Parser
         return new AbstractMap.SimpleEntry<>(first, second);
     }
 
-    public List<AbstractMap.SimpleEntry<Integer, Integer>> parse(String[] input)
+    public List<AbstractMap.SimpleEntry<Integer, Integer>> parse(String[] lines)
     {
-        if (input.length == 0)
-            return new ArrayList<>();
         List<AbstractMap.SimpleEntry<Integer, Integer>> result = new ArrayList<>();
 
-        result.add(split(input[0]));
+        for (String line : lines)
+        {
+            result.add(split(line));
+        }
         return result;
     }
 

@@ -44,7 +44,7 @@ class ParserTest
     private static Stream<Arguments> InputParseTest() {
         return Stream.of(
                 Arguments.of(new String[]{"4   3"}, new ArrayList<>(List.of(new AbstractMap.SimpleEntry<>(4, 3)))),
-                Arguments.of(new String[]{"3   4"}, new ArrayList<>(List.of(new AbstractMap.SimpleEntry<>(3, 4)))),
+                Arguments.of(new String[]{"47078   87818"}, new ArrayList<>(List.of(new AbstractMap.SimpleEntry<>(47078, 87818)))),
                 Arguments.of(new String[]{"3   4", "4   3"}, new ArrayList<>(List.of(new AbstractMap.SimpleEntry<>(3, 4), new AbstractMap.SimpleEntry<>(4, 3))))
         );
     }

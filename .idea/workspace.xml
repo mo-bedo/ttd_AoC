@@ -5,6 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6fb46a2e-f154-4908-be7a-c82099f45329" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/mobedo/PairSplitter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/mobedo/PairSplitterTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/mobedo/Parser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/mobedo/Parser.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/org/mobedo/ParserTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/mobedo/ParserTest.java" afterDir="false" />
@@ -28,7 +30,9 @@
   &quot;associatedIndex&quot;: 4
 }</component>
   <component name="ProjectId" id="2z5Yli0YBPBTEry5zunMTBnvY3K" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -50,6 +54,14 @@
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="org.mobedo" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="org.mobedo" />
+    </key>
+  </component>
   <component name="RunManager" selected="JUnit.Tests">
     <configuration name="AoC" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="org.mobedo.Main" />
