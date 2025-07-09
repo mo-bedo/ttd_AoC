@@ -7,13 +7,14 @@ import org.junit.jupiter.params.provider.MethodSource;
 
 import static org.junit.jupiter.api.Assertions.*;
 import java.util.AbstractMap;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Stream;
 
 class ParserTest
 {
     @Test
-    void ParseTest()
+    void ParseReturnEmptyListGivenEmptyInput()
     {
         // Arrange
         String[] input = { };
@@ -23,25 +24,30 @@ class ParserTest
         List<AbstractMap.SimpleEntry<Integer, Integer>> result = sut.parse(input);
 
         // Assert
-        assertEquals(result.size(), 0);
+        assertTrue(result.isEmpty());
     }
-    @Test
-    void ParseTest1()
+
+    @ParameterizedTest
+    @MethodSource("InputParseTest")
+    void ParseTest(String[] input, List<AbstractMap.SimpleEntry<Integer, Integer>> expected)
     {
         // Arrange
-        String[] input = { "4   3" };
         Parser sut = new Parser();
 
         // Act
         List<AbstractMap.SimpleEntry<Integer, Integer>> result = sut.parse(input);
 
         // Assert
-        assertEquals(result.size(), 1);
-        assertEquals(result.get(0).getKey(), 4);
-        assertEquals(result.get(0).getValue(), 3);
+        assertEquals(expected, result);
     }
 
-//        String[] input = { "3   4", "4   3", "2   5" };
+    private static Stream<Arguments> InputParseTest() {
+        return Stream.of(
+                Arguments.of(new String[]{"4   3"}, new ArrayList<>(List.of(new AbstractMap.SimpleEntry<>(4, 3)))),
+                Arguments.of(new String[]{"3   4"}, new ArrayList<>(List.of(new AbstractMap.SimpleEntry<>(3, 4)))),
+                Arguments.of(new String[]{"3   4", "4   3"}, new ArrayList<>(List.of(new AbstractMap.SimpleEntry<>(3, 4), new AbstractMap.SimpleEntry<>(4, 3))))
+        );
+    }
 
     @ParameterizedTest
     @MethodSource("InputSplitTest")

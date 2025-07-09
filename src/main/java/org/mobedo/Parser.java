@@ -22,7 +22,7 @@ public class Parser
             return new ArrayList<>();
         List<AbstractMap.SimpleEntry<Integer, Integer>> result = new ArrayList<>();
 
-        result.add(new AbstractMap.SimpleEntry<>(4, 3));
+        result.add(split(input[0]));
         return result;
     }
 
