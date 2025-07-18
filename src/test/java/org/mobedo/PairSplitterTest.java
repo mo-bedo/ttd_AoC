@@ -36,7 +36,7 @@ public class PairSplitterTest
         AbstractMap.SimpleEntry<List<Integer>, List<Integer>> result = sut.splitPair(input);
 
         // Assert
-        assertEquals(result.getKey(), List.of(4));
-        assertEquals(result.getValue(), List.of(3));
+        assertEquals(List.of(4), result.getKey());
+        assertEquals(List.of(3), result.getValue());
     }
 }
