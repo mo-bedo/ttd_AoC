@@ -29,27 +29,18 @@ public class PairSplitterTest
         assertTrue(result.getValue().isEmpty());
     }
 
-    @Test
-    void PairSplitterTest1()
-    {
-        // Arrange
-        List<AbstractMap.SimpleEntry<Integer, Integer>> input = new ArrayList<>(List.of(new AbstractMap.SimpleEntry<>(4, 3)));
-        PairSplitter sut = new PairSplitter();
-
-        // Act
-        AbstractMap.SimpleEntry<List<Integer>, List<Integer>> result = sut.splitPair(input);
-
-        // Assert
-        assertEquals(List.of(4), result.getKey());
-        assertEquals(List.of(3), result.getValue());
-    }
-
-
     private static Stream<Arguments> InputLinesPairSplitter() {
         return Stream.of(
-                Arguments.of(new ArrayList<>(List.of(new AbstractMap.SimpleEntry<>(4, 3))), new AbstractMap.SimpleEntry<>(List.of(4), List.of(3))),
-                Arguments.of(new ArrayList<>(List.of(new AbstractMap.SimpleEntry<>(6, 4))), new AbstractMap.SimpleEntry<>(List.of(6), List.of(4)))
-
+                Arguments.of(List.of(new AbstractMap.SimpleEntry<>(4, 3)), new AbstractMap.SimpleEntry<>(List.of(4), List.of(3))),
+                Arguments.of(List.of(new AbstractMap.SimpleEntry<>(14697, 55843)), new AbstractMap.SimpleEntry<>(List.of(14697), List.of(55843))),
+                Arguments.of(List.of(new AbstractMap.SimpleEntry<>(6, 4)), new AbstractMap.SimpleEntry<>(List.of(6), List.of(4))),
+                Arguments.of(
+                        List.of
+                                (
+                                    new AbstractMap.SimpleEntry<>(4, 3),
+                                    new AbstractMap.SimpleEntry<>(6, 4)
+                                ),
+                        new AbstractMap.SimpleEntry<>(List.of(4,6), List.of(3,4)))
         );
     }
 

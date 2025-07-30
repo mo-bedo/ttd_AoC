@@ -29,7 +29,7 @@ class ParserTest
 
     @ParameterizedTest
     @MethodSource("InputParseTest")
-    void ParseTest(String[] input, List<AbstractMap.SimpleEntry<Integer, Integer>> expected)
+    void ParseReturnsValidListGivenValidValues(String[] input,List<AbstractMap.SimpleEntry<Integer,Integer>> expected)
     {
         // Arrange
         Parser sut = new Parser();
@@ -43,9 +43,15 @@ class ParserTest
 
     private static Stream<Arguments> InputParseTest() {
         return Stream.of(
-                Arguments.of(new String[]{"4   3"}, new ArrayList<>(List.of(new AbstractMap.SimpleEntry<>(4, 3)))),
-                Arguments.of(new String[]{"47078   87818"}, new ArrayList<>(List.of(new AbstractMap.SimpleEntry<>(47078, 87818)))),
-                Arguments.of(new String[]{"3   4", "4   3"}, new ArrayList<>(List.of(new AbstractMap.SimpleEntry<>(3, 4), new AbstractMap.SimpleEntry<>(4, 3))))
+                Arguments.of(new String[]{"4    3"}, new ArrayList<>(List.of(new AbstractMap.SimpleEntry<>(4, 3)))),
+                Arguments.of(new String[]{"30    40"}, new ArrayList<>(List.of(new AbstractMap.SimpleEntry<>(30,40)))),
+                Arguments.of(new String[]{"3    4","4    3"},
+                        new ArrayList<>(List.of(
+                            new AbstractMap.SimpleEntry<>(3,4),
+                            new AbstractMap.SimpleEntry<>(4,3)
+                ))),
+                Arguments.of(new String[]{"12345    12345"}, new ArrayList<>(List.of(new AbstractMap.SimpleEntry<>(12345, 12345))))
+                //TODO: Test maken met negatieve karakters
         );
     }
 
