@@ -5,13 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6fb46a2e-f154-4908-be7a-c82099f45329" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/mobedo/DistanceCalculator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/mobedo/ListsSorter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/mobedo/PuzzleSolver.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/mobedo/SorterTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/mobedo/PairSplitter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/mobedo/PairSplitter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/mobedo/PairSplitterTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/mobedo/PairSplitterTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/mobedo/ParserTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/mobedo/ParserTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/mobedo/DistancesCalculator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/mobedo/DistancesCalculatorTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/mobedo/DistanceCalculator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/mobedo/PuzzleSolver.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/mobedo/SorterTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/mobedo/ListsSorterTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,7 +42,7 @@
   "keyToString": {
     "Application.AoC.executor": "Run",
     "Downloaded.Files.Path.Enabled": "false",
-    "JUnit.Tests.executor": "Run",
+    "JUnit.Tests.executor": "Debug",
     "Repository.Attach.Annotations": "false",
     "Repository.Attach.JavaDocs": "false",
     "Repository.Attach.Sources": "false",
@@ -51,7 +50,8 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/data/oefen/AdventOfCode",
+    "last_directory_selection": "D:/data/oefen/AoC/src/main/java/org/mobedo",
+    "last_opened_file_path": "D:/data/svn/trunk/RaasAuto",
     "project.structure.last.edited": "Libraries",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.2"
@@ -98,5 +98,16 @@
       <updated>1751022555988</updated>
     </task>
     <servers />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/org/mobedo/DistancesCalculatorTest.java</url>
+          <line>22</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
